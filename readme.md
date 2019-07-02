@@ -1,6 +1,7 @@
 # Todo
-in cmd composer install
-change env.example to .env
-php artisan key:generate
-setup your database
-php artisan migrate --seed
+1. in cmd composer install
+2. change env.example to .env
+3. php artisan key:generate
+4. setup your database
+5. php artisan migrate --seed
+
