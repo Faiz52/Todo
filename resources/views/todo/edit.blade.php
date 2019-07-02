@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 <h1 class="text-center my-5">Edit Todo</h1>
 
 <div class="row justify-content-center">
-	<div class="col-md-8">
+	<div class="col-md-12">
 			<form action="{{route('todo.update' , $todo->id)}}" method="POST">
 				@csrf
 				{{method_field('PATCH')}}

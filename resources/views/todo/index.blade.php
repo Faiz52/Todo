@@ -1,11 +1,13 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
+
+@include('layouts.success')
 
 <h1 class="text-center my-5">Todo</h1>
 
 <div class="row justify-content-center">
-	<div class="col-md-8">
+	<div class="col-md-12">
 		<div class="card card-default">
 			<div class="card-header">
 				Todo
@@ -15,7 +17,7 @@
 			<ul class="list-group">
 			@foreach($todos as $todo)
 			<li class="list-group-item">
-				{{$todo->list}}
+				<a href="todo/{{$todo->id}}">{{$todo->list}}</a>
 				@if(!$todo->completed)
 				<a href="todo/{{$todo->id}}/complete" class="btn btn-success btn-sm float-right">Complete</a>
 				@endif

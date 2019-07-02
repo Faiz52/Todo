@@ -7,7 +7,7 @@
 <h1 class="text-center my-5">Create Todo</h1>
 
 <div class="row justify-content-center">
-	<div class="col-md-8">
+	<div class="col-md-12">
 			<form action="{{route('todo.store')}}" method="POST">
 				@csrf
 				<div class="form-group">
