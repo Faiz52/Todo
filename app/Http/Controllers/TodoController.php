@@ -13,9 +13,16 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function search(Request $request)
+    {
+        $search = $request->get('query');
+        $todo = Todo::where('list' , 'like' , "%{$search}%")->paginate(10);
+        return view('todo.index')->with('todos' , $todo);
+    }
+
     public function index()
     {
-        $todo = Todo::orderBy('id' , 'desc')->paginate(10);
+        $todo = Todo::orderBy('id' , 'desc')->paginate(20);
         return view('todo.index')->with('todos', $todo);
     }
 

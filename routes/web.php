@@ -21,11 +21,11 @@ Route::get('todo/create' , 'TodoController@create');
 Route::post('todo' , 'TodoController@store');
 Route::get('todo/{todo}' , 'TodoController@show');
 Route::get('todo/{todo}/edit' , 'TodoController@edit');
-Route::post('todo/{todo}' , 'TodoController@update');
-Route::get('todo/{todo}' , 'TodoController@destroy');
+Route::put('todo/{todo}' , 'TodoController@update');
+Route::delete('todo/{todo}' , 'TodoController@destroy');
 Route::get('todo/{todo}/complete' , 'TodoController@complete');
 */
-
+Route::get('todo/search' , 'TodoController@search')->name('todo.search');
 Route::get('todo/{todo}/complete' , 'TodoController@complete');
 Route::resource('todo' , 'TodoController');
  
